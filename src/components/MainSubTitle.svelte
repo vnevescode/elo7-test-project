@@ -6,17 +6,22 @@
     .mainsubtitle-section{
         height: 288px;
         background-color: #fff;
+        
     }
 
     .info-container{
         margin-left: 70px;
         margin-right: 70px;
+
+        word-wrap: break-word;
+  	    
+  	    
     }
 
     .info-container_info{
         padding-top: 50px;
         font-family: 'Roboto';
-        font-size: 25px;
+        font-size: 20px;
         color: #7d7873;
         box-sizing:border-box;
     }
@@ -45,7 +50,9 @@
 <section class="mainsubtitle-section">
     <div class="info-container">
         <div class="info-container_info">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                
+            </span>
         </div>
         <div class="info-container_horizontal_rule">
             <hr>

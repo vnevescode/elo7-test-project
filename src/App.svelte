@@ -1,5 +1,6 @@
 <script>
-    import MainSubTitle from "./components/MainSubTitle.svelte";
+    import CeoWords from "./components/CeoWords.svelte";
+import MainSubTitle from "./components/MainSubTitle.svelte";
 import Home from "./pages/Home.svelte";
 </script>
 
@@ -9,3 +10,4 @@ import Home from "./pages/Home.svelte";
 
 <Home/>
 <MainSubTitle/>
+<CeoWords/>
