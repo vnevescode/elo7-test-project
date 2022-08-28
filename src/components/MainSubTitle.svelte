@@ -6,16 +6,18 @@
     .mainsubtitle-section{
         height: 288px;
         background-color: #fff;
+        display: flex;
+        justify-content: center;
         
     }
 
     .info-container{
         margin-left: 70px;
-        margin-right: 70px;
-
-        word-wrap: break-word;
-  	    
-  	    
+        margin-right: 70px;       
+        word-wrap: break-word; 
+        width: 960px;
+        border: 1px solid black;        
+        
     }
 
     .info-container_info{
@@ -24,6 +26,7 @@
         font-size: 20px;
         color: #7d7873;
         box-sizing:border-box;
+        margin: 0px 50px;
     }
 
     .info-container_horizontal_rule{        
@@ -41,7 +44,7 @@
         text-align: center;
 
         font-family: 'Roboto';
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
         color: #359c9c;
     }
@@ -50,8 +53,7 @@
 <section class="mainsubtitle-section">
     <div class="info-container">
         <div class="info-container_info">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                
             </span>
         </div>
         <div class="info-container_horizontal_rule">
