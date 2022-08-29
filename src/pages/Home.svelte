@@ -1,79 +1,57 @@
 <script>
-    import 'animate.css';
-    let src = "assets/foto-header.png";  
+
+    import { onMount } from 'svelte';
+    import CeoWords from '../components/CeoWords.svelte';
+    import CompanyOpenJobs from '../components/CompanyOpenJobs.svelte';
+    import CompanyPhoto from '../components/CompanyPhoto.svelte';
+    import CompanyValues from '../components/CompanyValues.svelte';
+    import HeroSection from '../components/HeroSection.svelte';
+    import MainSubTitle from '../components/MainSubTitle.svelte';
+    import MeetOurTeam from '../components/MeetOurTeam.svelte';
+    
+
+
+    let heroSectionPhoto = {
+        src:"assets/foto-header.png"
+    }
+    let members = [
+        { src:"assets/camila.png"},
+        { src:"assets/guto.png"},
+        { src:"assets/david.png"},
+        { src:"assets/beatriz.png"}
+    ]
+
+    let membersNames = [
+        'Beatriz','Guto','David','Camila'
+    ]
+
+    let companyValues = [
+        { src:"assets/qualidade.png", title:"Qualidade de Vida" },
+        { src:"assets/descontracao.png", title:"Ambiente Descontraído" },
+        { src:"assets/atividades.png", title:"Atividades Extras" }
+    ]
+
+    let companyPhoto = { src:"assets/foto-bottom.png"}
+
+    let openJobs;
+
+    onMount( async () => {        
+        const response = await fetch('http://www.mocky.io/v2/5d6fb6b1310000f89166087b');
+        const data = await response.json();
+        openJobs = data.vagas;
+    })
+    
 </script>
 
-<style>    
-    .darkness{
-        background: rgba(0, 0, 0, 0.25);
-        width:100%;
-        height: 675px;
-        
-    } 
-    
-    .full-screen-width{        
-        background-image: url('/assets/foto-header.png');
-        background-size: cover;
-        background-position: center;
-        
-    }
-
-    .main-text-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 900px;
-    } 
-
-    .main-text{     
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 75px;
-        line-height: 80px;
-        color: #FFFFFF;        
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
-
-        /* animation */
-        animation: fadeIn; 
-        animation-duration: 3s;
-        
-        
-    }
-
-    /* max-width  */
-    @media screen and (max-width: 744px) {
-        .darkness{ min-height: 350px; } 
-        
-    }
-
-    /* .parent-div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-    }
-
-    #example-div{
-        
-        background-color: tomato;
-        background-size: 100%;
-        border-radius: 50%;
-    } */
+<style>  
 
 </style>
 
+<HeroSection  heroSectionPhoto={ heroSectionPhoto}/>
+<MainSubTitle/>
+<CeoWords/>
+<MeetOurTeam  members={members} membersNames={membersNames}/>
+<CompanyValues companyValues={companyValues}/>
+<CompanyPhoto companyPhoto={companyPhoto}/>
+<CompanyOpenJobs openJobs={openJobs}/>
 
-<section class="section team-image-section">
-    <div class="full-screen-width">
-        <div class="darkness">
-            <div class="main-text-container">
-                <p class="main-text">Trabalhe no Elo7</p>
-            </div>
-        </div>        
-    </div> 
-    
-    <!-- <div class="parent-div">
-        <div id="example-div">HELLO</div>
-    </div> -->
-</section>
