@@ -68,6 +68,9 @@
         font-weight: 600;
         color: #359c9c;
     }
+    .company-values-know-more-link{
+        color: #359c9c;
+    }
 
     .company-values-container-smartphone{
         flex-direction: column;
@@ -98,9 +101,12 @@
                         <span>{companyValue.title}</span>
                     </div>
                     <div class="company-values-container-column-text">
-                        <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                        </span>
+                        <article>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                        </article>
                     </div>
                 </div>        
             {/each}
@@ -129,6 +135,8 @@
         <hr class="company-values-hr">
     </div>
     <div class="company-values-know-more">
-        <span>SAIBA MAIS >></span>
+        <a href="https://www.elo7.com.br/">
+            <span class="company-values-know-more-link">SAIBA MAIS >></span>
+        </a>
     </div>
 </section>       

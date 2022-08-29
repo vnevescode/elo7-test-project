@@ -54,14 +54,7 @@
         justify-content: center;
         display: flex;
         flex-direction: column;
-    }
-
-    /* tablet  */
-    @media screen and (max-width: 1024px) {
-        .meet-our-team-container-members{
-            
-        }
-    }
+    }  
 
     /* smartphone */
     @media screen and (max-width: 767px) {
@@ -78,11 +71,8 @@
             <h1>CONHEÇA NOSSO TIME</h1>
             <h1>FORA DE SÉRIE</h1>            
         </div>
-        {#if innerWidth < 767}
-            
-            <div 
-                class="meet-our-team-container-members-smartphone"
-            >
+        {#if innerWidth < 767}            
+            <div class="meet-our-team-container-members-smartphone">
                 {#each members as member, index}
                     <div class="member-container-info">
                         <div class="member-image">

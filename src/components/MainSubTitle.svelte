@@ -40,8 +40,7 @@
              
     }
 
-    .info-container_open_jobs{
-        
+    .info-container_open_jobs{        
         margin: auto; 
         text-align: center;
 
@@ -49,6 +48,10 @@
         font-size: 21px;
         font-weight: 600;
         color: #359c9c;
+    }
+
+    .info-container_open_jobs_link{
+        color: #359c9c;        
     }
 
     /* smartphone */
@@ -67,14 +70,20 @@
 <section class="mainsubtitle-section">
     <div class="info-container">
         <div class="info-container_info">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet. 
-            </span>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                    aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet. 
+                </p>
+            </article>            
         </div>
         <div class="info-container_horizontal_rule">
             <hr>
         </div>
         <div class="info-container_open_jobs">
-            <span>VAGAS EM ABERTO >></span>
+            <a href="#section-open-jobs">
+                <span class="info-container_open_jobs_link">VAGAS EM ABERTO >></span>
+            </a>
         </div>
     </div>
 </section>

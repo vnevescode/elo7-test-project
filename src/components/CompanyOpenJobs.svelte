@@ -54,9 +54,20 @@
         font-weight: 600;
     }
 
+    @media only screen and (max-width: 767px) { 
+        .company-open-jobs-container-job{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+        
+    }
+    
 </style>
 
-<section class="company-open-jobs-section">
+<section class="company-open-jobs-section" id="section-open-jobs">
     <div class="company-open-jobs-container">
         <div class="company-open-jobs-container-title">
             <span>VAGAS EM ABERTO</span>
