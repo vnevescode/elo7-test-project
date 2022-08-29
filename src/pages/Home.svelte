@@ -7,8 +7,7 @@
     import CompanyValues from '../components/CompanyValues.svelte';
     import HeroSection from '../components/HeroSection.svelte';
     import MainSubTitle from '../components/MainSubTitle.svelte';
-    import MeetOurTeam from '../components/MeetOurTeam.svelte';
-    
+    import MeetOurTeam from '../components/MeetOurTeam.svelte';   
 
 
     let heroSectionPhoto = {

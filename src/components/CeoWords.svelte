@@ -1,4 +1,37 @@
-<script></script>
+<script>
+
+    let videoId = '9TIQ_u0TBaY';
+
+    function playYoutubeVideo(){        
+        let videoYT = "<iframe width='400' height='220' src='https://www.youtube.com/embed/" + 
+        videoId +"?&theme=dark&autoplay=1&autohide=2frameborder='0'></iframe>"
+        document.getElementById('video_'+videoId).innerHTML = videoYT;
+    }
+
+    /* click Outside Event */
+    function clickOutside(node) {  
+        const handleClick = event => {
+            if (node && !node.contains(event.target) && !event.defaultPrevented) {
+                node.dispatchEvent(
+                    new CustomEvent('click_outside', node)
+                )
+            }
+        }
+        document.addEventListener('click', handleClick, true);    
+        return {
+            destroy() {
+                document.removeEventListener('click', handleClick, true);
+            }
+        }
+    }
+
+    /* bring back CEO image */
+    function handleClickOutside(event) {		
+        let ceoImage = `<img class="ceo-words-photo-style" src="assets/placeholder-video.png" alt="Ceo">`;
+        document.getElementById('video_'+videoId).innerHTML = ceoImage;
+	}
+
+</script>
 
 <style>
     .ceo-words{
@@ -19,10 +52,12 @@
         flex:1;        
     }
 
-    .ceo-words-photo > img{
-        
+    .ceo-words-photo-style:hover{
+        border: 5px solid #7d7873;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        cursor:pointer;
     }
-
+    
     .ceo-words-info{        
         flex:1;
         /* margin-left: 70px; */
@@ -87,8 +122,14 @@
 
 <section class="ceo-words">    
     <div class="ceo-words-container">
-        <div class="ceo-words-photo">
-            <img src="assets/placeholder-video.png" alt="Ceo Photo"> 
+        <div class="ceo-words-photo">            
+            <div id="video_9TIQ_u0TBaY" 
+                use:clickOutside 
+                on:click_outside={handleClickOutside} 
+                on:click={ playYoutubeVideo }
+            >
+                <img  class="ceo-words-photo-style" src="assets/placeholder-video.png" alt="Ceo">
+            </div>            
         </div>
         <div class="ceo-words-info">
             <div class="ceo-words-info-container">
@@ -99,7 +140,11 @@
                     <span><em>Carlos Curioni</em></span>
                 </div>
                 <div class="ceo-words-info-text">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </span>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+                    </article>                    
                 </div> 
             </div>               
         </div>
