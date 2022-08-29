@@ -15,7 +15,21 @@
         justify-content: center;        
         width: 960px;
         margin-top: 30px;
-        border: 1px solid;
+        /* border: 1px solid; */
+    }
+
+    @media screen and (max-width: 1024px) {
+        
+        .company-photo-container{
+            transform:scale(0.8);
+        }
+    }
+
+    /* smartphone */
+    @media screen and (max-width: 767px) {
+        .company-photo-container > img{
+            transform:scale(0.8);
+        }
     }
 </style>
 

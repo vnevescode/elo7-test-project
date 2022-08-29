@@ -1,11 +1,16 @@
 <script>
     export let companyValues;
+    $: innerWidth = 0;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <style>
 
     .company-values-section{
         font-family: 'Roboto';
+        color: #7d7873;
+        
     }
 
     .company-values{
@@ -19,7 +24,7 @@
         height: 400px;
         width: 960px;
         margin-top: 30px;
-        border: 1px solid;
+        /* border: 1px solid; */
         
     }
     .company-values-container-column{
@@ -31,7 +36,7 @@
 
     .company-values-container-column-title{
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .company-values-container-column-text{
@@ -59,15 +64,48 @@
         display: flex;
         justify-content: center; 
         margin-top: 20px;
-        font-size: 25px;
+        font-size: 21px;
         font-weight: 600;
         color: #359c9c;
+    }
+
+    .company-values-container-smartphone{
+        flex-direction: column;
+    }
+
+    .company-values-container-column-smartphone{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
     }
 
 </style>
 
 <section class="company-values-section">
-    <div class="company-values">
+    <div class="company-values">        
+        {#if innerWidth < 767}
+        <!-- <p>This is innerWidth {innerWidth}</p> -->
+        <div class="company-values-container-smartphone">
+            {#each companyValues as companyValue, index}
+                <div class="company-values-container-column-smartphone">
+                    <div class="company-values-container-column-image">
+                        <img src={companyValue.src} alt="Company Values image">
+                    </div>
+                    <div class="company-values-container-column-title">
+                        <span>{companyValue.title}</span>
+                    </div>
+                    <div class="company-values-container-column-text">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                        </span>
+                    </div>
+                </div>        
+            {/each}
+        </div>
+        {:else}
         <div class="company-values-container">
             {#each companyValues as companyValue, index}
                 <div class="company-values-container-column">
@@ -85,6 +123,7 @@
                 </div>        
             {/each}
         </div>
+        {/if} 
     </div>
     <div class="company-values-hr-div">
         <hr class="company-values-hr">
