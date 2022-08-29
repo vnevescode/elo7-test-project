@@ -24,6 +24,9 @@ This is my project for the Front-end challenge from Elo7 company. I've used Svel
 - Create some logic about available jobs positions following these steps :
   - Do not show inactive positions.
   - For data without location, replace with the word "Remote".
+- ** Extra Features **:
+  - When user click on anchor tag "Vagas em Aberto>>",the page redirect automatically to the bottom of the page where open opportunities is shown.
+  - When user click on CEO photo a Youtube embedded video will shown. If user clicked outside the photo will come back to the original position.
   
 ## Installation
 
