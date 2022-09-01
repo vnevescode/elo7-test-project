@@ -1,6 +1,5 @@
 <script>
-    import 'animate.css';
-    export let heroSectionPhoto;  
+     
 </script>
 
 <style>    
@@ -9,15 +8,13 @@
         width:100%;
         height: 675px;
         
-    } 
-    
+    }     
     .full-screen-width{        
         background-image: url('/assets/foto-header.png');
         background-size: cover;
         background-position: center;
         
     }
-
     .main-text-container{
         display: flex;
         align-items: center;
@@ -36,11 +33,8 @@
 
         /* animation */
         animation: fadeIn; 
-        animation-duration: 3s;
-        
-        
+        animation-duration: 3s;       
     }
-
     /* tablet  */
     @media screen and (max-width: 1024px) {
         .darkness{
@@ -52,7 +46,6 @@
         }
         
     }
-
     /* smartphone */
     @media screen and (max-width: 767px) {
         .darkness{
@@ -67,25 +60,15 @@
             font-size: 40px;
         }
         
-    }
-
-
-
-    
-
+    }  
 </style>
 
-
-<section class="section team-image-section">
+<div class="section team-image-section">
     <div class="full-screen-width">
         <div class="darkness">
             <div class="main-text-container">
                 <p class="main-text">Trabalhe no Elo7</p>
             </div>
         </div>        
-    </div> 
-    
-    <!-- <div class="parent-div">
-        <div id="example-div">HELLO</div>
-    </div> -->
-</section>
+    </div>   
+</div>
