@@ -33,8 +33,12 @@ This is my project for the Front-end challenge from Elo7 company. I've used Svel
 Be sure to be at path of root project and after this execute the following commands.
 
 ```sh
-npm i / npm install
+npm i or npm install
 npm run dev
+```
+For testing with Jest use the following commands
+```sh
+npm run test or npm test
 ```
 
 ## ScreenShots
